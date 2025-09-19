@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="navbar">
+			<a href="index.html" class="brand"
+				><img src="assets/logo.png" class="brand-img" alt="logo" />
+				<p class="brand-name">Chandra.</p></a
+			>
+			<nav>
+				<ul class="menu-list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="contact" class="main">
+			<div class="hero">
+				<div class="container">
+					<div class="btn-container">
+						<div class="btn-drawer transition-top">
+							pen banget...
+						</div>
+						<div class="btn-drawer transition-bottom">
+							...chandraa
+						</div>
+
+						<button
+							class="btn"
+							onclick="document.getElementById('data').scrollIntoView();"
+						>
+							<span class="btn-text">Dapatkan Info</span>
+						</button>
+
+						<svg
+							class="btn-corner"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="-1 1 32 32"
+						>
+							<path
+								d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z"
+							></path>
+						</svg>
+						<svg
+							class="btn-corner"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="-1 1 32 32"
+						>
+							<path
+								d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z"
+							></path>
+						</svg>
+						<svg
+							class="btn-corner"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="-1 1 32 32"
+						>
+							<path
+								d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z"
+							></path>
+						</svg>
+						<svg
+							class="btn-corner"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="-1 1 32 32"
+						>
+							<path
+								d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z"
+							></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+			<div id="data" class="data">
+				<div class="container">
+					<div class="row row-cols-2">
+						<div class="table-data col">
+							<table class="table-index">
+								<tr>
+									<td>Email</td>
+									<td>
+										<a
+											href="mailto:twelve.rakki@gmail.com"
+											target="_blank"
+											style="text-decoration: underline"
+											>twelve.rakki@gmail.com</a
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>Nomor Telepon</td>
+									<td>+62 822 5923 1358</td>
+								</tr>
+								<tr>
+									<td>GitHub</td>
+									<td>
+										<a
+											href="https://github.com/twelverakki"
+											target="_blank"
+											style="text-decoration: underline"
+											>twelverakki</a
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>Instagram</td>
+									<td>
+										<a
+											href="https://www.instagram.com/chndr_andy/"
+											target="_blank"
+											style="text-decoration: underline"
+											>chndr_andy</a
+										>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="form-data col">
+							<form>
+								<div class="row">
+									<div class="form-group col-6">
+										<input
+											class="input"
+											type="text"
+											name="name"
+											required
+										/>
+										<label class="label">Nama</label>
+									</div>
+
+									<div class="form-group col-6">
+										<input
+											class="input"
+											type="email"
+											name="email"
+											required
+										/>
+										<label class="label">Email</label>
+									</div>
+
+									<div class="form-group col-12">
+										<input
+											class="input"
+											type="tel"
+											name="subject"
+											required
+										/>
+										<label class="label">No. Telepon</label>
+									</div>
+
+									<div class="form-group col-12">
+										<h4>Jenis pesan:</h4>
+										<div class="row">
+											<label
+												class="material-checkbox col-6"
+											>
+												<input
+													type="radio"
+													name="jenis-pesan"
+												/>
+												<span class="checkmark"></span>
+												Pertanyaan
+											</label>
+											<label
+												class="material-checkbox col-6"
+											>
+												<input
+													type="radio"
+													name="jenis-pesan"
+												/>
+												<span class="checkmark"></span
+												>Kritik
+											</label>
+											<label
+												class="material-checkbox col-6"
+											>
+												<input
+													type="radio"
+													name="jenis-pesan"
+												/>
+												<span class="checkmark"></span>
+												Saran
+											</label>
+											<label
+												class="material-checkbox col-6"
+											>
+												<input
+													type="radio"
+													name="jenis-pesan"
+												/>
+												<span class="checkmark"></span>
+												Kerjasama
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group col-12">
+										<textarea
+											class="input"
+											name="message"
+											aria-required="true"
+											required
+										></textarea>
+										<label class="label">Pesan</label>
+									</div>
+
+									<div class="form-group col-12">
+										<label class="material-checkbox">
+											<input type="checkbox" />
+											<span class="checkmark"></span>
+											Saya Bukan Robot
+										</label>
+									</div>
+
+									<div class="form-group col-12">
+										<input type="submit" class="input" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="contact">
+			<p>@2023 Chandra Andaya. All Rights Reserved.</p>
+		</footer>
+	</body>
+</html>
