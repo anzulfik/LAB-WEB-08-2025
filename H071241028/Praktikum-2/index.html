@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glad2Glow - Cushion G2G</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar (Tailwind Only) -->
+  <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-50 
+              bg-transparent hover:bg-pink-700 transition duration-500">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-white hover:text-yellow-300 cursor-pointer transition duration-300">
+      Glad2Glow
+    </h1>
+
+    <!-- Menu -->
+    <ul class="flex space-x-6 text-white font-medium">
+      <li><a href="#beranda" class="hover:text-yellow-300 transition duration-300">Beranda</a></li>
+      <li><a href="#tentang" class="hover:text-yellow-300 transition duration-300">Tentang</a></li>
+      <li><a href="#produk" class="hover:text-yellow-300 transition duration-300">Produk</a></li>
+      <li><a href="#kontak" class="hover:text-yellow-300 transition duration-300">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="relative h-screen bg-cover bg-center" style="background-image: url('assets/cushion.jpg');">
+    <!-- Overlay pink -->
+    <div class="absolute inset-0 bg-pink-500 bg-opacity-40"></div>
+
+    <!-- Konten Hero -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+      <h2 class="text-5xl font-bold mb-4 drop-shadow-lg">Glad2Glow Perfect Cushion</h2>
+      <p class="text-lg mb-6 drop-shadow">Untuk Kulit Tampak Glowing & Alami</p>
+      <a href="#produk" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg font-medium transition">
+      Beli Sekarang
+      </a>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="px-8 md:px-20 py-16 bg-pink-100 text-center">
+    <h3 class="text-3xl font-bold text-pink-700 mb-4">Tentang Kami</h3>
+    <p class="text-gray-700 max-w-2xl mx-auto">
+      Glad2Glow adalah brand kecantikan lokal yang berfokus menghadirkan produk aman, berkualitas, dan ramah kulit untuk menunjang kecantikan alami setiap individu. Produk unggulan kami, Cushion G2G, diformulasikan dengan tekstur ringan, coverage natural, serta kandungan pelembap yang membuat kulit tampak glowing sekaligus terlindungi berkat perlindungan SPF. Dengan desain praktis, tahan lama, dan aman untuk semua jenis kulit, Glad2Glow hadir sebagai solusi sederhana bagi siapa pun yang ingin tampil cantik, percaya diri, dan nyaman sepanjang hari.
+    </p>
+  </section>
+
+  <!-- Produk -->
+  <section id="produk" class="px-8 md:px-20 py-16 bg-white">
+    <h3 class="text-3xl font-bold text-center text-pink-700 mb-12">Produk Kami</h3>
+
+    <!-- Produk Utama -->
+    <div class="text-center mb-12">
+      <img src="assets/g2g.jpg" alt="Cushion G2G" class="mx-auto w-64 md:w-80 mb-6">
+      <h4 class="text-xl font-bold text-pink-700">Cushion G2G</h4>
+      <p class="text-gray-600 mt-2">Memberikan kulit tampak glowing dan lembap sepanjang hari.</p>
+    </div>
+
+    <!-- Produk Lainnya -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="p-4 bg-pink-100 rounded-lg shadow hover:shadow-lg transition text-center">
+        <img src="assets/claymask.jpg" alt="Brightening Clay Mask" class="mx-auto mb-4 w-32 h-32 object-contain">
+        <p class="font-semibold">Brightening Clay Mask</p>
+        <span class="text-pink-600">Rp32.000</span>
+      </div>
+      <div class="p-4 bg-pink-100 rounded-lg shadow hover:shadow-lg transition text-center">
+        <img src="assets/toner.jpg" alt="Essence Toner" class="mx-auto mb-4 w-32 h-32 object-contain">
+        <p class="font-semibold">Essence Toner</p>
+        <span class="text-pink-600">Rp36.000</span>
+      </div>
+      <div class="p-4 bg-pink-100 rounded-lg shadow hover:shadow-lg transition text-center">
+        <img src="assets/peeling.jpg" alt="Peeling Solution" class="mx-auto mb-4 w-32 h-32 object-contain">
+        <p class="font-semibold">Peeling Solution</p>
+        <span class="text-pink-600">Rp49.000</span>
+      </div>
+      <div class="p-4 bg-pink-100 rounded-lg shadow hover:shadow-lg transition text-center">
+        <img src="assets/micelarwater.jpg" alt="Peeling Gel" class="mx-auto mb-4 w-32 h-32 object-contain">
+        <p class="font-semibold">Micellar Water</p>
+        <span class="text-pink-600">Rp49.000</span>
+      </div>
+    </div>
+  </section>
+
+    <!-- Showcase Produk G2G (Responsive) -->
+  <section id="showcase" class="w-full py-16 bg-white text-center">
+    <img src="assets/2in1 cushion.jpg" alt="Cushion G2G" 
+        class="mx-auto w-full md:w-5/6 lg:w-2/3">
+  </section>
+
+
+    <!-- Ingredients Section -->
+  <section id="ingredients" class="px-8 md:px-20 py-16 bg-white">
+    <h3 class="text-3xl font-bold text-center text-pink-700 mb-12">Ingredients</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Ingredient 1 -->
+      <div class="bg-pink-100 rounded-lg shadow p-6 text-center hover:shadow-lg transition">
+        <img src="assets/symwhite.jpg" alt="377 Symwhite" 
+            class="mx-auto mb-4 w-full h-40 object-cover rounded-md">
+        <h4 class="text-xl font-bold text-pink-700 mb-2">377 Symwhite</h4>
+        <p class="text-gray-600 text-sm">
+          Mencerahkan kulit, mengurangi noda hitam, dan meratakan warna kulit.
+        </p>
+      </div>
+
+      <!-- Ingredient 2 -->
+      <div class="bg-pink-100 rounded-lg shadow p-6 text-center hover:shadow-lg transition">
+        <img src="assets/ceramide.jpg" alt="5X Ceramide" 
+            class="mx-auto mb-4 w-full h-40 object-cover rounded-md">
+        <h4 class="text-xl font-bold text-pink-700 mb-2">5X Ceramide</h4>
+        <p class="text-gray-600 text-sm">
+          Menguatkan lapisan kulit dan menjaga kelembapan lebih lama.
+        </p>
+      </div>
+
+      <!-- Ingredient 3 -->
+      <div class="bg-pink-100 rounded-lg shadow p-6 text-center hover:shadow-lg transition">
+        <img src="assets/niacinamide.jpg" alt="Niacinamide" 
+            class="mx-auto mb-4 w-full h-40 object-cover rounded-md">
+        <h4 class="text-xl font-bold text-pink-700 mb-2">Niacinamide</h4>
+        <p class="text-gray-600 text-sm">
+          Membantu mengurangi minyak berlebih, menyamarkan pori, dan menjaga kulit tetap halus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Kontak -->
+  <section id="kontak" class="px-8 md:px-20 py-16 bg-pink-100 text-center">
+    <h3 class="text-3xl font-bold text-pink-700 mb-6">Hubungi Kami</h3>
+    <form class="max-w-lg mx-auto space-y-4">
+      <input type="text" placeholder="Nama Anda" required
+             class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+      <input type="email" placeholder="Email Anda" required
+             class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+      <textarea placeholder="Pesan Anda" rows="4" required
+                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+      <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-700 transition">
+        Kirim
+      </button>
+    </form>
+  </section>
+
+    <!-- Footer -->
+  <footer class="bg-pink-700 text-white px-8 md:px-20 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+      
+      <!-- Instagram -->
+      <div class="flex justify-start md:justify-start">
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+          <p class="mb-4">Dapatkan update terbaru & promo eksklusif di Instagram kami:</p>
+          <a href="https://www.instagram.com/glad2glow?igsh=bmRpMnU0eWMyOHV0" target="_blank" 
+            class="inline-block bg-white text-pink-700 font-semibold px-6 py-3 rounded-md hover:bg-pink-100 transition">
+            @glad2glow
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex justify-center">
+        <div class="text-left">
+          <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+          <p>cs@glad2glow.com</p>
+        </div>
+      </div>
+
+      <!-- Brand Info -->
+      <div class="flex justify-end md:justify-end">
+        <div class="text-left">
+          <h4 class="text-2xl font-bold">Glad2Glow®</h4>
+          <p class="text-sm mt-4 md:mt-0">©2025 Glad2Glow® All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
