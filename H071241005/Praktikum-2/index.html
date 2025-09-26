@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Tailwind</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-sans text-yellow-800 ">
+
+
+  <nav class="bg-gradient-to-r from-blue-400 to-purple-600 text-white p-10  ">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Ti-Kum Adventure</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#beranda" class="hover:bg-white hover:text-purple-600 px-4 py-2 rounded-lg 
+          ">Beranda</a></li>
+        <li><a href="#tentang" class="hover:bg-white hover:text-purple-600 px-4 py-2 rounded-lg 
+          ">Tentang</a></li>
+        <li><a href="#layanan" class="hover:bg-white hover:text-purple-600 px-4 py-2 rounded-lg 
+          ">Layanan</a></li>
+        <li><a href="#kontak" class="hover:bg-white hover:text-purple-600 px-4 py-2 rounded-lg 
+          ">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="h-screen w-full bg-[url('11.png')] bg-cover bg-center flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Welcome to Ti-Kum Adventure
+      </h1>
+      <p class="text-lg md:text-xl text-white italic">
+        Kami merancang, Anda menikmati. Inilah cara berkelas melihat senja
+      </p>
+    </div>
+  </header>
+
+
+  <section class="bg-gray-200 py-16 rounded-lg">
+    <div class=" container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Bergabunglah Sekarang!</h3>
+      <p class="mb-6">Nikmati layanan terbaik untuk kebutuhan Anda dengan mudah.</p>
+      <a href="#daftar"
+        class="bg-gradient-to-r from-blue-400 to-purple-600 text-white px-8 py-3 rounded-lg shadow-lg hover:scale-105 hover:from-purple-600 hover:to-blue-400 transition duration-300 inline-block">Daftar
+        Sekarang</a>
+    </div>
+  </section>
+
+  <section id="tentang" class="container mx-auto py-16 px-6 text-center">
+    <h3 class="text-2xl font-bold mb-4">Tentang Kami</h3>
+    <p>Website Ti-kum Adventure bertujuan sebagai platform digital komprehensif yang menampilkan kredibilitas dan
+      keunggulan penyedia layanan open trip petualangan (khususnya pendakian gunung), dengan merinci secara transparan
+      layanan inti seperti logistik, pemanduan, dan pemenuhan kebutuhan dasar, sekaligus membangun kepercayaan calon
+      pelanggan melalui testimoni nyata dari peserta sebelumnya, guna menarik minat dan mendorong konversi pemesanan.
+    </p>
+  </section>
+
+  <section id="layanan" class="bg-gray-100 py-16 px-6">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-8">Layanan Kami</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+          <img src="layanan1.png" class="w-full h-40 object-cover rounded mb-4">
+          <h4 class="text-xl font-semibold mb-2 text-purple-600">Logistik Perjalanan dan Administrasi</h4>
+          <p>"Layanan ini mencakup semua persiapan sebelum pendakian. Pihak operator mengurus transportasi dari titik
+            kumpul ke basecamp, semua perizinan dan tiket masuk kawasan (SIMAKSI), serta menyusun rencana perjalanan
+            (itinerary) yang terstruktur untuk peserta."</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+          <img src="layanan2.png" class="w-full h-40 object-cover rounded mb-4">
+          <h4 class="text-xl font-semibold mb-2 text-purple-600">Pemandu Pendakian dan Keamanan (Guiding & Safety)</h4>
+          <p>"Ini adalah layanan inti selama pendakian. Kami menyediakan pemandu (guide) profesional untuk memimpin
+            jalan dan memastikan keamanan, serta porter untuk membawa sebagian besar beban perlengkapan tim. Tujuannya
+            adalah agar peserta bisa mendaki dengan aman dan lebih nyaman."</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+          <img src="layanan3.png" class="w-full h-40 object-cover rounded mb-4">
+          <h4 class="text-xl font-semibold mb-2 text-purple-600">Kebutuhan Pokok di Gunung (Camp & Consumption)</h4>
+          <p>"Layanan ini mencakup semua kebutuhan hidup selama berada di gunung. Kami menyediakan tenda untuk
+            beristirahat, seluruh makanan dan minuman (yang dimasak oleh tim), serta alat masak. Sering kali, layanan
+            dokumentasi (foto/video) juga termasuk dalam paket ini."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto py-16 px-6 text-center">
+    <h3 class="text-2xl font-bold mb-8">Apa Kata Mereka?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+        <img src="test1.png" alt="Andi" class="w-full h-40 object-cover rounded-lg mb-3">
+        <p class="italic">"Makanan enak, tenda nyaman, dan view pagi yang luar biasa. Pengalaman tak terlupakan!"</p>
+        <span class="font-semibold mt-2 text-purple-600">- Andi</span>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+        <img src="test2.png" alt="Sinta" class="w-full h-40 object-cover rounded-lg mb-3">
+        <p class="italic">"Semua diurus! Tinggal datang, naik, dan menikmati. Anti ribet pokoknya!"</p>
+        <span class="font-semibold mt-2 text-purple-600">- Sinta</span>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+        <img src="test3.png" alt="Budi" class="w-full h-40 object-cover rounded-lg mb-3">
+        <p class="italic">"Guide-nya sabar & berpengalaman. Perjalanan aman, nyaman, dan banyak cerita seru."</p>
+        <span class="font-semibold mt-2 text-purple-600">- Budi</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="kontak" class="bg-gray-100 py-16 px-6">
+    <div class="mx-auto max-w-lg">
+      <h3 class="text-2xl font-bold mb-6 text-center">Hubungi Kami</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nama Lengkap" class="w-full border p-3 rounded" required>
+        <input type="email" placeholder="Email" class="w-full border p-3 rounded" required>
+        <textarea placeholder="Pesan" class="w-full border p-3 rounded" rows="4"></textarea>
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-blue-400 to-purple-600 text-white py-3 rounded shadow-lg hover:scale-105 hover:from-purple-600 hover:to-blue-400 transition duration-300">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gradient-to-r from-blue-400 to-purple-600 text-white p-8 text-center rounded-lg">
+    <p>&copy; 2025 MyLanding. Semua Hak Dilindungi.</p>
+    <div class="flex justify-center space-x-6 mt-2">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
