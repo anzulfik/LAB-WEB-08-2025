@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Website Contoh</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="font-[poppins] text-white bg-black">
+		<header
+			class="sticky top-0 px-[4%] py-8 flex justify-between w-full z-30"
+		>
+			<a href="index.html" class="gap-4"
+				><img
+					src="assets/logo.png"
+					class="inline-block h-9 me-4"
+					alt="logo"
+				/>
+				<p class="inline-block font-semibold text-3xl">Chandra.</p></a
+			>
+			<nav class="max-sm:hidden">
+				<ul class="flex overflow-x-hidden font-semibold gap-7">
+					<li><a href="#hero">Beranda</a></li>
+					<li><a href="#tentang">Tentang</a></li>
+					<li><a href="#fitur">Fitur</a></li>
+					<li><a href="#testimoni">Testimoni</a></li>
+					<li><a href="#kontak">Kontak</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section
+			id="hero"
+			class="h-dvh -mt-[105px] w-[vw] bg-[url('assets/bg-empty.jpg')] bg-cover bg-no-repeat px-[min(10vw,200px)] overflow-hidden"
+		>
+			<div
+				class="h-full flex flex-col justify-center gap-4 z-20 relative"
+			>
+				<h1
+					class="text-[min(10vw,3.9rem)] font-montserrat font-semibold uppercase leading-none"
+				>
+					<span class="text-[#ff0]">Hello</span> I am <br />Chandra.
+				</h1>
+
+				<p>"Frontend developer muda.."</p>
+
+				<div class="pt-6">
+					<button
+						class="relative group inline-block p-px font-semibold leading-6 text-white bg-neutral-900 hover:shadow-[0_0_60px_-10px_#ffff00] cursor-pointer rounded-2xl transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
+					>
+						<span
+							class="absolute inset-0 rounded-2xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+						></span>
+						<span
+							class="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950"
+						>
+							<div
+								class="relative z-10 flex items-center space-x-3"
+							>
+								<span
+									class="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-[#ff0]"
+									>Lets Talk!
+								</span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									class="w-7 h-7 transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-[#ff0]"
+								>
+									<path
+										d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+									></path>
+								</svg>
+							</div>
+						</span>
+					</button>
+				</div>
+			</div>
+			<img
+				src="assets/bg-orang.png"
+				class="z-0 h-[90%] w-auto absolute bottom-0 right-[3vw]"
+				alt=""
+			/>
+		</section>
+
+		<section id="tentang" class="py-20 px-[min(10vw,200px)]">
+			<div class="mx-auto flex flex-col md:flex-row items-center gap-12">
+				<div class="w-full text-center">
+					<h2 class="text-3xl font-bold mb-4 text-[#ff0]">
+						Tentang Saya
+					</h2>
+					<p class="mb-4 leading-relaxed">
+						Saya seorang
+						<span class="font-semibold">frontend developer</span>
+						dengan pengalaman membuat antarmuka yang modern,
+						responsif, dan user-friendly. Fokus saya adalah mengubah
+						desain menjadi pengalaman digital yang interaktif dan
+						estetis, menggunakan HTML, CSS, Tailwind, dan
+						JavaScript.
+					</p>
+					<p class="mb-8 leading-relaxed">
+						Selain coding, saya senang mengeksplorasi tren UI/UX
+						terbaru dan selalu memastikan setiap proyek yang saya
+						kerjakan memiliki kualitas tinggi, performa optimal, dan
+						tampilan yang memikat.
+					</p>
+					<div class="relative">
+						<button
+							class="relative group inline-block p-px font-semibold leading-6 text-[#ff0] hover:text-white bg-[#ff0] hover:bg-neutral-900 hover:shadow-[0_0_60px_-10px_#ffff00] cursor-pointer rounded-2xl transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
+						>
+							<span
+								class="absolute inset-0 rounded-2xl p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+							></span>
+							<span
+								class="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950"
+							>
+								<div
+									class="relative z-10 flex items-center space-x-3"
+								>
+									<span
+										class="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-[#ff0]"
+										>Lets Talk!
+									</span>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										class="w-7 h-7 transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-[#ff0]"
+									>
+										<path
+											d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+										></path>
+									</svg>
+								</div>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="fitur"
+			class="py-20 px-[min(10vw,200px)] bg-[url('assets/bg-empty.jpg')] bg-cover"
+		>
+			<div class="mx-auto px-6 text-center">
+				<h2 class="text-3xl font-bold mb-12">Keunggulan Saya</h2>
+
+				<div class="grid gap-8 md:grid-cols-3">
+					<div
+						class="p-6 bg-black rounded-xl shadow hover:shadow-lg hover:scale-110 hover:-translate-y-2 transition-[1s_all]"
+					>
+						<div class="text-blue-600 mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-12 w-12 mx-auto"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 8c1.38 0 2.5 1.12 2.5 2.5S13.38 13 12 13s-2.5-1.12-2.5-2.5S10.62 8 12 8z"
+								/>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 21v-4"
+								/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold mb-2">UI/UX Modern</h3>
+						<p>
+							Menciptakan tampilan antarmuka yang bersih, modern,
+							dan mudah digunakan oleh user.
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-black rounded-xl shadow hover:shadow-lg hover:scale-110 hover:-translate-y-2 transition-[1s_all]"
+					>
+						<div class="text-green-600 mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-12 w-12 mx-auto"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M3 7h18M3 12h18M3 17h18"
+								/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold mb-2">
+							Frontend Responsif
+						</h3>
+						<p>
+							Website yang fleksibel dan optimal di desktop,
+							tablet, maupun smartphone.
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-black rounded-xl shadow hover:shadow-lg hover:scale-110 hover:-translate-y-2 transition-[1s_all]"
+					>
+						<div class="text-yellow-500 mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-12 w-12 mx-auto"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12h6M12 9v6"
+								/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold mb-2">
+							Kinerja Optimal
+						</h3>
+						<p>
+							Website ringan, cepat, dan smooth, memastikan
+							pengalaman user yang nyaman.
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-black rounded-xl shadow hover:shadow-lg hover:scale-110 hover:-translate-y-2 transition-[1s_all]"
+					>
+						<div class="text-red-500 mb-4">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-12 w-12 mx-auto"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4v16m8-8H4"
+								/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold mb-2">
+							Skill Frontend Lengkap
+						</h3>
+						<p>
+							Menguasai HTML, CSS, Tailwind, JavaScript, dan
+							library modern untuk hasil maksimal.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="testimoni"
+			class="py-20 px-[min(10vw,200px)] bg-black flex flex-col items-center"
+		>
+			<h2
+				class="text-3xl font-bold text-center mb-12 border-b-[3px] border-[#ff0] inline-block pb-2"
+			>
+				Apa Kata Mereka?
+			</h2>
+
+			<div class="grid gap-8 md:grid-cols-3 text-black">
+				<div
+					class="bg-white drop-shadow-lg rounded-2xl p-6 transition-all duration-300 hover:bg-[#ff0]"
+				>
+					<p class="italic mb-4">
+						“Bekerja dengan Kennan itu selalu menyenangkan. Frontend
+						yang ia buat clean, responsif, dan gampang
+						diintegrasikan dengan API backend saya.”
+					</p>
+					<h4 class="font-semibold text-lg">Andi</h4>
+					<span class="text-sm">Backend Developer</span>
+				</div>
+
+				<div
+					class="bg-white drop-shadow-lg rounded-2xl p-6 transition-all duration-300 hover:bg-[#ff0]"
+				>
+					<p class="italic mb-4">
+						“Ide-ide desain saya selalu diterjemahkan dengan baik
+						oleh Kennan. Detail spacing, warna, dan animasi terasa
+						hidup di setiap proyek.”
+					</p>
+					<h4 class="font-semibold text-lg">Maya</h4>
+					<span class="text-sm">UI/UX Designer</span>
+				</div>
+
+				<div
+					class="bg-white drop-shadow-lg rounded-2xl p-6 transition-all duration-300 hover:bg-[#ff0]"
+				>
+					<p class="italic mb-4">
+						“Penjelasan Kennan gampang dimengerti. Saya yang baru
+						belajar HTML & CSS jadi cepat paham karena dia sabar dan
+						runtut ngajarnya.”
+					</p>
+					<h4 class="font-semibold text-lg">Raka</h4>
+					<span class="text-sm">Mahasiswa</span>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="kontak"
+			class="h-[max(100vh,850px)] bg-[url('assets/bg3.jpg')] bg-cover px-20"
+		>
+			<div class="grid md:grid-cols-2 h-full place-items-center">
+				<div class="flex flex-col max-md:mt-15 max-md:mb-10">
+					<p>Chandra here..</p>
+					<h1 class="text-6xl text-[#ff0] font-montserrat uppercase">
+						Lets Talk!
+					</h1>
+				</div>
+
+				<form class="flex flex-wrap">
+					<div
+						class="flex-[0_0_auto] flex flex-col max-md:w-full md:w-1/2 gap-[7px] relative text-white mb-[30px] px-2"
+					>
+						<input
+							type="text"
+							required
+							class="peer h-[45px] rounded-md border-none outline-none px-[7px] text-white text-[15px] bg-transparent backdrop-blur-sm shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4)] focus:shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4),inset_3px_3px_10px_rgba(0,0,0,1),inset_-1px_-1px_6px_rgba(255,255,255,0.4)]"
+						/>
+						<label
+							class="absolute left-[18px] top-[13px] text-[15px] transition-all peer-focus:-translate-y-[35px] peer-focus:pl-[2px] peer-valid:-translate-y-[35px] peer-valid:pl-[2px]"
+						>
+							Nama
+						</label>
+					</div>
+					<div
+						class="flex-[0_0_auto] flex flex-col max-md:w-full md:w-1/2 gap-[7px] relative text-white mb-[30px] px-2"
+					>
+						<input
+							type="email"
+							required
+							class="peer h-[45px] rounded-md border-none outline-none px-[7px] text-white text-[15px] bg-transparent backdrop-blur-sm shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4)] focus:shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4),inset_3px_3px_10px_rgba(0,0,0,1),inset_-1px_-1px_6px_rgba(255,255,255,0.4)]"
+						/>
+						<label
+							class="absolute left-[18px] top-[13px] text-[15px] transition-all peer-focus:-translate-y-[35px] peer-focus:pl-[2px] peer-valid:-translate-y-[35px] peer-valid:pl-[2px]"
+						>
+							Email
+						</label>
+					</div>
+					<div
+						class="flex-[0_0_auto] w-full flex flex-col gap-[7px] relative text-white mb-[30px] px-2"
+					>
+						<input
+							type="tel"
+							required
+							class="peer h-[45px] rounded-md border-none outline-none px-[7px] text-white text-[15px] bg-transparent backdrop-blur-sm shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4)] focus:shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4),inset_3px_3px_10px_rgba(0,0,0,1),inset_-1px_-1px_6px_rgba(255,255,255,0.4)]"
+						/>
+						<label
+							class="absolute left-[18px] top-[13px] text-[15px] transition-all peer-focus:-translate-y-[35px] peer-focus:pl-[2px] peer-valid:-translate-y-[35px] peer-valid:pl-[2px]"
+						>
+							No. Telepon
+						</label>
+					</div>
+					<div
+						class="flex-[0_0_auto] w-full flex flex-col gap-[7px] relative text-white mb-[30px] px-2"
+					>
+						<textarea
+							class="peer h-[250px] rounded-md border-none outline-none px-[7px] text-white text-[15px] bg-transparent backdrop-blur-sm shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4)] focus:shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4),inset_3px_3px_10px_rgba(0,0,0,1),inset_-1px_-1px_6px_rgba(255,255,255,0.4)]"
+							name="message"
+							aria-required="true"
+							required
+						></textarea>
+						<label
+							class="absolute left-[18px] top-[13px] text-[15px] transition-all peer-focus:-translate-y-[35px] peer-focus:pl-[2px] peer-valid:-translate-y-[35px] peer-valid:pl-[2px]"
+							>Pesan</label
+						>
+					</div>
+					<div
+						class="flex-[0_0_auto] w-full flex flex-col gap-[7px] relative text-white mb-[30px] px-2"
+					>
+						<input
+							type="submit"
+							class="peer h-[45px] rounded-md border-none outline-none px-[7px] text-white text-[15px] bg-transparent backdrop-blur-sm focus:shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4)] shadow-[3px_3px_10px_rgba(0,0,0,1),-1px_-1px_6px_rgba(255,255,255,0.4),inset_3px_3px_10px_rgba(0,0,0,1),inset_-1px_-1px_6px_rgba(255,255,255,0.4)]"
+						/>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer class="py-9 px-[min(10vw,200px)]">
+			<div class="mx-auto w-full max-w-screen-xl">
+				<div class="md:flex md:items-center md:justify-between">
+					<span
+						class="text-sm text-gray-500 dark:text-gray-300 sm:text-center"
+						>© 2025 <a href="/">Chandra</a>. All Rights Reserved.
+					</span>
+					<div
+						class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse"
+					>
+						<a
+							target="_blank"
+							href="https://github.com/twelverakki"
+							class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+						>
+							<svg
+								class="w-4 h-4"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="currentColor"
+								viewBox="0 0 21 16"
+							>
+								<path
+									d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+								/>
+							</svg>
+							<span class="sr-only">Discord community</span>
+						</a>
+						<a
+							target="_blank"
+							href="https://www.instagram.com/chndr_andy/"
+							class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-instagram"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+								/>
+							</svg>
+							<span class="sr-only">Insta page</span>
+						</a>
+						<a
+							target="_blank"
+							href="#"
+							class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								class="bi bi-whatsapp"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+								/>
+							</svg>
+							<span class="sr-only">What'sup contact</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
