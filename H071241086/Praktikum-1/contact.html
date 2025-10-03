@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Siti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2>SNT</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTACT -->
+  <section class="contact-container">
+    <!-- Informasi Kontak -->
+    <div class="contact-info">
+      <h2>Informasi Kontak</h2>
+      <table>
+        <tr><th>Email</th><td>nurhalisatahirsiti@gmail.com</td></tr>
+        <tr><th>Nomor Telepon</th><td>+62 812 3456 7890</td></tr>
+        <tr><th>LinkedIn</th><td><a href="https://www.linkedin.com/in/siti-nur-halisa-tahir-206b67337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">linkedin.com/in/siti</a></td></tr>
+        <tr><th>Instagram</th><td><a href="https://www.instagram.com/thisarchives._?igsh=MWRiODNzajUxd3V4cQ==">instagram.com/siti</a></td></tr>
+        <tr><th>GitHub</th><td><a href="https://github.com/Sitinurhalisatahir">github.com/siti</a></td></tr>
+      </table>
+    </div>
+
+    <!-- Formulir Kontak -->
+    <div class="contact-form">
+      <h2>Kirim Pesan</h2>
+      <form>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" required>
+
+        <label>Tipe Pesan:</label>
+        <div>
+          <input type="radio" id="pertanyaan" name="tipe" value="pertanyaan">
+          <label for="pertanyaan">Pertanyaan</label>
+          <input type="radio" id="kritik" name="tipe" value="kritik">
+          <label for="kritik">Kritik</label>
+          <input type="radio" id="saran" name="tipe" value="saran">
+          <label for="saran">Saran</label>
+          <input type="radio" id="kerjasama" name="tipe" value="kerjasama">
+          <label for="kerjasama">Kerjasama</label>
+        </div>
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+        <div>
+          <input type="checkbox" id="persetujuan" name="persetujuan" required>
+          <label for="persetujuan">Saya menyetujui data saya digunakan untuk keperluan komunikasi.</label>
+        </div>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Siti Nur Halisa Tahir</p>
+    <p>
+        <a href="https://www.instagram.com/thisarchives._?igsh=MWRiODNzajUxd3V4cQ==" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+        <a href="https://github.com/Sitinurhalisatahir" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+        <a href="https://www.linkedin.com/in/siti-nur-halisa-tahir-206b67337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak - Portfolio</title>
+
+  
+  <link rel="stylesheet" href="style.css" />
+
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  
+  <style>
+    
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar" role="navigation">
+    <div class="logo">MyPortfolio</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <header class="hero small-hero" role="banner">
+    <div class="hero-text">
+      <h1>Kontak</h1>
+      <p>Hubungi saya melalui informasi dan form di bawah</p>
+    </div>
+  </header>
+
+  
+  <main>
+    <section>
+      <h2>Informasi Kontak </h2>
+      <table class="info-table" role="table" aria-label="Informasi Kontak">
+        <tr><td>Email</td><td>anugrahasharyabubakar@gmail.com</td></tr>
+        <tr><td>Nomor Telepon</td><td>085398009506</td></tr>
+        
+        <tr><td>Instagram</td><td><a href="#">@anggaashry</a></td></tr>
+        <tr><td>GitHub</td><td><a href="#">github.com/MUHANUGRAHASHARYPUTRA</a></td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Form Kontak</h2>
+      <form class="contact-form" action="#" method="post">
+        <label>Nama: <input type="text" name="nama" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Nomor Telepon: <input type="tel" name="tel" required></label>
+
+        <p>Pilih tipe pesan:</p>
+        <label><input type="radio" name="tipe" value="Pertanyaan" required> Pertanyaan</label>
+        <label><input type="radio" name="tipe" value="Saran"> Saran</label>
+        <label><input type="radio" name="tipe" value="Kerjasama"> Kerjasama</label>
+
+        <label>Pesan: <textarea name="pesan" rows="5" required></textarea></label>
+        <label><input type="checkbox" name="agree" required> Saya menyetujui syarat & data</label>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Angga- Universitas Hasanuddin</p>
+  </footer>
+
+ 
+  <!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script> AOS.init(); </script> -->
+</body>
+</html>

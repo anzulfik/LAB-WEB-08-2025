@@ -1,0 +1,321 @@
+/* style.css - Final Pink Gradient Modern (rapi + estetik) */
+
+:root {
+  --pink-light: #ffe6f0;
+  --pink-main: #ffb6c1;
+  --pink-dark: #ff6f91;
+  --pink-gradient: linear-gradient(90deg, #ffb6c1, #ff8fa3, #ff6f91);
+  --white: #fff;
+  --text-dark: #333;
+  --max-content-width: 1100px;
+}
+
+/* RESET & BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--pink-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: var(--pink-gradient);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.header-inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+nav a:hover { background: rgba(255,255,255,0.15); }
+nav a.active { background: rgba(255,255,255,0.25); }
+
+/* MAIN */
+main {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 36px; 
+}
+.hero-left img {
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.5);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+.hero-text { max-width: 520px; }
+.hero-text h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: var(--pink-dark);
+}
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+}
+
+/* SECTION TITLE */
+section h2 {
+  text-align: center;
+  margin: 36px 0 18px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--pink-dark);
+}
+
+/* TABLE CARD */
+.table-card {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-card th, .table-card td {
+  padding: 14px 18px;
+}
+.table-card th {
+  background: var(--pink-gradient);
+  color: var(--white);
+  text-align: left;
+  font-size: 15px;
+  width: 42%;
+  vertical-align: top;
+  text-align: left;
+}
+.table-card td {
+  background: #fff;
+  font-weight: 600;
+  border-bottom: 1px solid #ffe6f0;
+  vertical-align: top;
+  text-align: left;
+}
+.table-card tr:last-child td { border-bottom: none; }
+
+/* Kotak info-card */
+.info-card {
+  max-width: 650px;          /* supaya tidak terlalu lebar */
+  margin: 0 auto 30px;       /* center dan kasih jarak bawah */
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 24px 30px;        /* padding lebih lega */
+  text-align: justify;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* styling konten di dalam card */
+.info-card p,
+.info-card ul,
+.info-card ol,
+.info-card dl {
+  margin: 0;
+  padding: 0;
+}
+
+.info-card ul,
+.info-card ol {
+  padding-left: 20px;        /* supaya bullet tidak nempel ke kotak */
+}
+
+.info-card dt {
+  font-weight: bold;
+  color: var(--pink-dark);
+  margin-top: 10px;
+}
+.info-card dd {
+  margin: 0 0 10px 20px;     /* indentasi supaya rapi */
+}
+
+
+/* FORM */
+form {
+  background: var(--white);
+  max-width: 900px;
+  margin: 26px auto 40px;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ffd7e4;
+  font-size: 15px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--pink-dark);
+  box-shadow: 0 0 6px rgba(255,111,145,0.3);
+}
+button {
+  display: inline-block;
+  background: var(--pink-gradient);
+  color: var(--white);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: 0.2s ease;
+}
+button:hover { transform: translateY(-2px); opacity: 0.95; }
+
+/* CONTACT HERO */
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.contact-img img {
+  width: 200px; height: 200px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* RADIO GROUP (custom radio) */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 12px 0 20px;
+}
+.radio-group input[type="radio"] { display: none; }
+.radio-group label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s;
+}
+.radio-group label::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  border: 2px solid var(--pink-dark);
+  border-radius: 50%;
+  background: #fff;
+}
+.radio-group input[type="radio"]:checked + label::before {
+  background: var(--pink-dark);
+  box-shadow: 0 0 0 3px rgba(255,111,145,0.25);
+}
+.radio-group input[type="radio"]:checked + label {
+  color: var(--pink-dark);
+}
+
+.checkbox-option.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding: 8px 12px;           /* kasih ruang dalam kiri & kanan */
+  border: 1px solid #ffe6f0;   /* opsional: biar ada garis rapi */
+  border-radius: 8px;          /* opsional: biar lebih cantik */
+  background: #fff;            /* opsional: biar kontras */
+}
+
+.checkbox-option.right label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  padding-left: 8px;           /* kasih jarak dari kiri */
+}
+
+.checkbox-option.right input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  margin-left: 15px;           /* jarak tambahan dari teks */
+}
+
+/* FOOTER */
+footer {
+  background: var(--pink-gradient);
+  color: var(--white);
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #fff;                 /* warna putih biar nyatu dengan footer */
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: opacity 0.3s;
+}
+
+footer a:hover {
+  opacity: 0.8;                 /* efek hover */
+  text-decoration: underline;   /* opsional, biar kelihatan link */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-text h2 { font-size: 28px; }
+  .hero-left img { width: 180px; height: 180px; }
+}
+@media (max-width: 600px) {
+  nav ul { gap: 12px; }
+  .hero-left img { width: 160px; height: 160px; }
+  .hero-text { max-width: 100%; text-align: center; }
+  .contact-img img { width: 160px; height: 160px; }
+}

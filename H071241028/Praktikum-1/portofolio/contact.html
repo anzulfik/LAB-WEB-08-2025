@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Zahra - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR FIXED -->
+  <header>
+    <div class="header-inner">
+      <h1 class="logo">ZAHRA PORTOFOLIO</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO KONTAK -->
+    <section class="contact-hero">
+      <div class="contact-img">
+        <img src="img/azzara.jpg" alt="Foto Profil Zahra" />
+      </div>
+
+      <div class="contact-info">
+        <h2>Informasi Kontak</h2>
+        <div class="table-card">
+          <table>
+            <tbody>
+              <tr><th>Email</th><td>azzahrasyam49@email.com</td></tr>
+              <tr><th>Nomor Telepon</th><td>0812-3456-7890</td></tr>
+              <tr><th>LinkedIn</th><td>linkedin.com/in/azzahrasyam</td></tr>
+              <tr><th>Instagram</th><td>@fadhilahazz__</td></tr>
+              <tr><th>GitHub</th><td>github.com/fadhilahazzahra</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULIR KONTAK -->
+    <section>
+      <h2>Formulir Kontak</h2>
+      <form>
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required />
+
+        <label for="tel">Nomor Telepon</label>
+        <input type="tel" id="tel" name="telepon" placeholder="08xxxxxxxxxx" required />
+
+        <p><strong>Tipe Pesan:</strong></p>
+        <div class="radio-group">
+          <input type="radio" id="pertanyaan" name="tipe" value="Pertanyaan" required>
+          <label for="pertanyaan">Pertanyaan</label>
+
+          <input type="radio" id="kritik" name="tipe" value="Kritik">
+          <label for="kritik">Kritik</label>
+
+          <input type="radio" id="saran" name="tipe" value="Saran">
+          <label for="saran">Saran</label>
+
+          <input type="radio" id="kerjasama" name="tipe" value="Kerjasama">
+          <label for="kerjasama">Kerjasama</label>
+        </div>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="6" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+
+        <div class="checkbox-option right">
+          <label for="persetujuan">Saya menyetujui data saya digunakan untuk keperluan komunikasi.</label>
+        <input type="checkbox" id="persetujuan" required />
+        </div>
+
+
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+  <p>&copy; 2025 Zahra | 
+    <a href="https://www.instagram.com/fadhilahazz__/" target="_blank" rel="noopener noreferrer">Instagram</a> 
+    &amp; 
+    <a href="https://github.com/Azzahra9" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p>
+  </footer>
+</body>
+</html>
