@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1> UNO GAME </h1>
+            <div class="balance-info">Saldo: $<span id="balance">5000</span></div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <div class="bot-area">
+                <div class="bot-label">🤖 Bot (<span id="botCardCount">7</span> kartu)</div>
+                <div class="bot-hand" id="botHand"></div>
+            </div>
+
+            <div class="status-message" id="statusMessage">Permainan Dimulai!</div>
+
+            <div class="center-area">
+                <div class="deck-pile">
+                    <div class="pile-label">Deck</div>
+                    <div class="deck" id="deck" onclick="drawCard()">
+                        <img src="assets/back.png" alt="Deck" class="card-image">
+                    </div>
+                </div>
+
+                <div class="discard-pile">
+                    <div class="pile-label">Kartu Teratas</div>
+                    <div id="discardPile"></div>
+                </div>
+            </div>
+
+            <div class="player-area">
+                <div class="player-label">👤 Anda (<span id="playerCardCount">7</span> kartu)</div>
+                <div class="player-hand" id="playerHand"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-uno" id="unoBtn" onclick="callUno()">UNO!</button>
+                <button class="btn btn-call-uno" id="callUnoOnBotBtn" onclick="callUnoOnBot()">Panggil UNO Lawan!</button>
+            </div>
+        </div>
+
+        <!-- Bet Modal -->
+        <div class="modal active" id="betModal">
+            <div class="modal-content">
+                <h2>Masukkan Taruhan</h2>
+                <p>Saldo Anda: $<span id="modalBalance">5000</span></p>
+                <input type="number" id="betInput" min="100" placeholder="Minimal $100">
+                <div>
+                    <button class="btn btn-primary" onclick="startGame()">Mulai Permainan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Picker Modal -->
+        <div class="modal" id="colorModal">
+            <div class="modal-content">
+                <h2>Pilih Warna</h2>
+                <div class="color-picker">
+                    <button class="color-btn red" onclick="selectColor('red')">Merah</button>
+                    <button class="color-btn blue" onclick="selectColor('blue')">Biru</button>
+                    <button class="color-btn green" onclick="selectColor('green')">Hijau</button>
+                    <button class="color-btn yellow" onclick="selectColor('yellow')">Kuning</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Game Over</h2>
+                <p id="gameOverMessage"></p>
+                <div>
+                    <button class="btn btn-primary" onclick="resetGame()">Main Lagi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
