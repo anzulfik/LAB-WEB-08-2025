@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+:root {
+    /* Warna Dasar Dark Mode */
+    --bg-main-dark: #1f1a24;    /* Latar Belakang Sangat Gelap (Hampir Hitam Ungu) */
+    --surface-dark: #2c2533;    /* Permukaan Elemen/Kotak (Panel Kontrol, Info) */
+    --text-light: #f5f5f5;      /* Teks Putih Off-White */
+    
+    /* Aksen Pink/Magenta (Digunakan untuk Highlight, Border, Tombol UNO) */
+    --accent-pink-light: #ff6e96; /* Pink Cerah (Neon) */
+    --accent-pink-dark: #9c27b0;  /* Ungu Gelap */
+    --card-back-dark: #6a0531;  /* Maroon/Dark Pink untuk Belakang Kartu */
+    
+    /* Bayangan */
+    --shadow-deep: rgba(0, 0, 0, 0.8);
+
+    /* Warna UNO Standar yang Kuat */
+    --uno-red: #d32f2f;
+    --uno-yellow: #ffc107;
+    --uno-green: #388e3c;
+    --uno-blue: #1976d2;
+    --uno-black: #212121; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    /* TEMA: Ubah warna teks menjadi terang */
+    color: var(--text-light); 
+}
+
+/* -------------------- GAME CONTAINER -------------------- */
+#game-container {
+    /* POSISI & UKURAN TIDAK DIUBAH */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* MEMPERTAHANKAN LEBAR ASLI */
+    height: 100%;
+    
+    /* TEMA: Ubah background menjadi Dark Pink/Ungu */
+    background: radial-gradient(circle at 50% 50%, #2f253a, var(--bg-main-dark));
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* -------------------- CONTROL PANEL -------------------- */
+#control-panel {
+    /* POSISI & UKURAN TIDAK DIUBAH */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    
+    /* TEMA: Ubah background menjadi Dark Surface dengan blur */
+    background-color: var(--surface-dark);
+    backdrop-filter: blur(8px);
+    
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    /* TEMA: Border dan Shadow */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -5px 0 20px var(--shadow-deep);
+}
+
+#control-panel .control-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#control-panel label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+#control-panel input {
+    padding: 8px;
+    border-radius: 5px;
+    
+    /* TEMA: Gaya input Dark Mode */
+    border: 1px solid #444;
+    background-color: #333;
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+}
+
+#control-panel button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    transition: all 0.2s;
+    /* TEMA: Teks gelap di tombol cerah */
+    color: var(--bg-main-dark); 
+}
+
+#control-panel button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* TEMA: Warna tombol */
+#start-round-btn { background-color: var(--uno-green); color: white; }
+#start-round-btn:hover:not(:disabled) { background-color: #43a047; }
+
+#pass-turn-btn { background-color: #ff9800; color: white; }
+#uno-btn { background-color: var(--accent-pink-light); color: var(--surface-dark); } /* Pink Neon */
+#call-uno-btn { background-color: var(--accent-pink-dark); color: white; } /* Ungu Gelap */
+
+/* -------------------- GAME MESSAGES -------------------- */
+#game-messages {
+    /* TEMA: Background Dark Mode transparan */
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 80px;
+    font-size: 0.9em;
+    font-weight: 400;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* TEMA: Border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.log-entry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mini-card {
+    width: 30px;
+    height: 44px;
+    border-radius: 4px;
+    /* TEMA: Border dan Shadow */
+    border: 1px solid var(--accent-pink-light);
+    box-shadow: 0 2px 5px var(--shadow-deep);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; 
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+}
+.mini-card.red { background-color: var(--uno-red); }
+.mini-card.yellow { background-color: var(--uno-yellow); color: var(--uno-black); }
+.mini-card.green { background-color: var(--uno-green); }
+.mini-card.blue { background-color: var(--uno-blue); }
+.mini-card.black { background: linear-gradient(45deg, #444, #666); }
+.mini-card.is-symbol { font-size: 16px; }
+
+/* -------------------- AREAS -------------------- */
+#bot-area, #player-area {
+    /* LEBAR ASLI */
+    width: calc(100% - 300px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bot-hand-display, #player-hand-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+}
+
+#bot-info, #player-info {
+    /* TEMA: Info Panel Dark Aesthetic */
+    background-color: var(--surface-dark);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 700;
+    box-shadow: 0 4px 8px var(--shadow-deep);
+    border: 1px solid var(--accent-pink-light); 
+}
+
+#table-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* -------------------- KARTU DEPAN -------------------- */
+.card {
+    /* UKURAN ASLI */
+    width: 75px; 
+    height: 110px; 
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    /* TEMA: Border putih terang dan Shadow */
+    border: 2px solid var(--text-light); 
+    box-shadow: 0 6px 12px var(--shadow-deep);
+    user-select: none;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#deck-pile img {
+    width: 75px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    /* TEMA: Border dan Shadow */
+    border: 2px solid var(--text-light);
+    box-shadow: 0 6px 12px var(--shadow-deep);
+}
+
+#player-hand-display .card {
+    /* MARGIN & TRANSISI ASLI */
+    margin: 0 -20px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+#player-hand-display .card:hover {
+    transform: translateY(-20px) scale(1.05);
+    z-index: 100;
+    box-shadow: 0 10px 30px var(--shadow-deep);
+}
+.card.playable {
+    /* TEMA: Highlight Pink Neon */
+    box-shadow: 0 0 20px 5px var(--accent-pink-light);
+    border-color: var(--accent-pink-light);
+}
+
+/* -------------------- KARTU BELAKANG -------------------- */
+.card-back {
+    /* UKURAN & POSISI ASLI */
+    position: relative;
+    width: 75px;
+    height: 110px;
+    border-radius: 8px;
+    overflow: hidden;
+    /* TEMA: Border & Shadow */
+    border: 2px solid var(--text-light);
+    box-shadow: 0 6px 12px var(--shadow-deep);
+    /* TEMA: Warna belakang kartu Maroon/Dark Pink */
+    background-color: var(--card-back-dark);
+}
+
+.card-back .card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#bot-hand-display .card-back {
+    /* UKURAN ASLI */
+    width: 60px;
+    height: 90px;
+    margin: 0 -20px; 
+}
+
+/* -------------------- COLOR PICKER & ALERT MODAL -------------------- */
+#color-picker-modal, #alert-modal {
+    /* POSISI ASLI */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* TEMA: Background Dark Purple/Pink Translucent */
+    background-color: rgba(31, 26, 36, 0.95); 
+    backdrop-filter: blur(8px);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#color-picker-modal .modal-content, #alert-modal .modal-content {
+    /* TEMA: Modal content Dark Aesthetic */
+    background-color: var(--surface-dark);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow-deep);
+    border: 3px solid var(--accent-pink-light);
+}
+
+.color-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.color-options .color-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* TEMA: Border putih terang */
+    border: 4px solid var(--text-light);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-btn[data-color="red"] { background-color: var(--uno-red); }
+.color-btn[data-color="yellow"] { background-color: var(--uno-yellow); }
+.color-btn[data-color="green"] { background-color: var(--uno-green); }
+.color-btn[data-color="blue"] { background-color: var(--uno-blue); }
+
+.color-options .color-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px var(--accent-pink-light);
+}
+
+/* -------------------- UNO ALERT -------------------- */
+#uno-alert {
+    /* POSISI ASLI */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    
+    /* TEMA: Warna alert Pink Neon */
+    background-color: var(--accent-pink-light); 
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: var(--surface-dark); 
+    z-index: 2000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
