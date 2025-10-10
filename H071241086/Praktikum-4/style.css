@@ -1,0 +1,247 @@
+:root {
+  --bg: #0b5c2f;
+  --panel: rgba(0, 0, 0, 0.22);
+}
+
+/* === GLOBAL === */
+body {
+  margin: 0;
+  padding: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+/* === LAYOUT === */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.main {
+  flex: 1;
+  text-align: center;
+}
+
+.sidebar {
+  width: 300px;
+  background: var(--panel);
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+  margin: 8px 0 16px;
+  font-size: 20px;
+}
+
+.hand-label,
+.pile-title,
+.log-title {
+  font-weight: 700;
+}
+
+.color-text,
+.log-hint,
+.wild-hint {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* === HAND AREA === */
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px;
+}
+
+.card-img {
+  width: 72px;
+  border-radius: 8px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.6);
+}
+
+/* === DECK DISABLED === */
+#deck.deck-disabled {
+  filter: brightness(0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* === CENTER AREA === */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin: 18px 0;
+}
+
+.pile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* === COLOR INFO === */
+.color-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.active-color {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* === INPUT & BUTTONS === */
+input[type=number] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+button:hover:not(.btn-disabled) {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.btn-main { background: #ffd700; color: #111; }
+.btn-blue { background: #1e90ff; color: #fff; }
+.btn-red { background: #e53935; color: #fff; }
+.btn-disabled { background: #888; color: #fff; cursor: not-allowed; }
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* === LOG AREA === */
+.log {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 8px;
+  height: 70px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 13px;
+}
+
+/* === NOTIFICATION === */
+.notification {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  padding: 10px 18px;
+  border-radius: 10px;
+  display: none;
+  z-index: 999;
+}
+
+/* === OVERLAYS === */
+.overlay-full,
+.overlay-wild {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.overlay-wild {
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+}
+
+/* Overlay Boxes */
+.overlay-full .box,
+.wild-box {
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  text-align: center;
+  padding: 18px 24px;
+  min-width: 260px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* === WILD COLOR CHOICE === */
+.wild-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.wild-buttons button {
+  flex: 1;
+  max-width: 80px;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  color: #000;
+  text-align: center;
+}
+
+.wild-red { background: red; }
+.wild-blue { background: blue; }
+.wild-green { background: green; }
+.wild-yellow { background: yellow; }
+
+/* === SALDO === */
+.saldo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 720px) {
+  .container { flex-direction: column; }
+  .sidebar { width: 100%; }
+}
