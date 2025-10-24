@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Dogicapixel'; 
+    src: url('asset/dogicapixel.ttf') format('truetype');
+}
+.pixel-font { font-family: 'Dogicapixel', monospace; }
+.border-retro-window {
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: #FFFFFF; 
+    border-left-color: #FFFFFF;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+}
+
+.border-retro-input {
+        border-style: solid;
+        border-width: 2px;
+        border-top-color: #000000;
+        border-left-color: #000000;
+        border-right-color: #FFFFFF;
+        border-bottom-color: #FFFFFF;
+    }
+
+.retro-button {
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    box-shadow: 1px 1px 0 0 #000000;
+}
+.retro-button:active {
+    border-top-color: #000000;
+    border-left-color: #000000;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+.retro-header {
+    background-color: #000080;
+    color: white;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.retro-header span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.retro-header .buttons {
+    display: flex;
+    gap: 4px;
+}
+.retro-header .btn {
+    width: 16px;
+    height: 16px;
+    background-color: #C3C3C3;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #000;
+    cursor: pointer;
+}
+.retro-header .btn:hover {
+    background-color: #808080;
+    color: white;
+}
+.retro-nav {
+    background-color: #C3C3C3;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    gap: 8px;
+    padding: 4px 8px;
+}
+.retro-nav a {
+    background-color: #E0E0E0;
+    border: 2px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    color: #000;
+    text-decoration: none;
+}
+.retro-nav a:hover {
+    background-color: #808080;
+    color: white;
+}
+
+#retro-popup, #retro-popup-edit { 
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+#retro-popup.active, #retro-popup-edit.active { 
+    display: flex;
+}
+
+.popup-box {
+    background: #C3C3C3;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    padding: 16px;
+    width: 260px;
+    text-align: center;
+}
+
+@keyframes popup-open {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.animate-popup {
+    animation: popup-open 0.15s ease-out;
+}
