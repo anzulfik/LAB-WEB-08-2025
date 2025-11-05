@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: 'Coolvetica'; 
+    src: url('/fonts/Coolvetica-Rg.otf') format('opentype');
+    font-style: normal;
+}
